@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
               Atención Podológica Profesional en <span className="text-secondary">Concepción</span>
             </h1>
 
-            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 mt-[1px]">
+            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 mt-2">
               Servicio clínico a domicilio de alta calidad para el cuidado integral de sus pies. Llevamos la clínica a la comodidad de su hogar con los más altos estándares de higiene.
             </p>
 

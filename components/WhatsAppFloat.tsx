@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Facebook } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 
 const WhatsAppFloat: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -24,9 +24,24 @@ const WhatsAppFloat: React.FC = () => {
 
   return (
     <div className={`fixed bottom-6 right-6 z-40 flex flex-col gap-4 transition-all duration-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'}`}>
+      {/* Instagram Button */}
+      <a
+        href="https://www.instagram.com/Podomed_clinical"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visitar Instagram"
+        title="Síguenos en Instagram"
+        className="bg-gradient-to-br from-[#f09433] via-[#e6683c] to-[#bc1888] text-white p-3.5 rounded-full shadow-xl hover:opacity-90 transition-all transform hover:scale-110 flex items-center justify-center group relative hover:shadow-2xl"
+      >
+        <Instagram size={26} />
+        <span className="absolute right-full mr-3 bg-white text-gray-800 text-sm font-semibold px-3 py-1 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+          Síguenos en Instagram
+        </span>
+      </a>
+
       {/* Facebook Button */}
       <a
-        href="https://www.facebook.com/Podomed_clinical"
+        href="https://www.facebook.com/podomed.clinical"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Visitar Facebook"

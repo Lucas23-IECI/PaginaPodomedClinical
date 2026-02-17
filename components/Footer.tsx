@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
               </p>
               <div className="flex gap-4 pt-2">
                 <a
-                  href="https://www.facebook.com/Podomed_clinical"
+                  href="https://www.facebook.com/podomed.clinical"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Síguenos en Facebook"

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth scroll-pt-28">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Podomed Clinical — Atención Podológica Profesional a Domicilio en Concepción</title>
+    <meta name="description" content="Podomed Clinical — Servicio de podología clínica a domicilio en Concepción y alrededores. Atención profesional, instrumental estéril y trato personalizado por Gonzalo Acevedo." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Podomed Clinical — Podología Clínica a Domicilio" />
+    <meta property="og:description" content="Servicio podológico profesional a domicilio en Concepción. Instrumental estéril, atención personalizada." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CL" />
+    <!-- og:image pendiente: reemplazar con imagen real del negocio -->
+    <meta property="og:image" content="/Public/Fotos/og-image.jpg" />
+
+    <!-- Favicon (emoji placeholder — reemplazar con logo real) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦶</text></svg>" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1f3d89",
+              "primary-dark": "#162c63",
+              "secondary": "#2BB673",
+              "background-light": "#FFFFFF",
+              "background-alt": "#F5F7FA",
+              "background-dark": "#13161f",
+            },
+            fontFamily: {
+              "sans": ["Manrope", "sans-serif"],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Manrope', sans-serif;
+      }
+    </style>
+    <link rel="stylesheet" href="/index.css">
+  </head>
+  <body class="bg-background-light text-slate-900 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -29,15 +29,22 @@ const About: React.FC = () => {
             <h2 className="text-primary text-3xl font-extrabold tracking-tight mb-2">Conozca a su Especialista</h2>
             <h3 className="text-xl font-bold text-slate-700 mb-6">Gonzalo Andrés Acevedo Salvo</h3>
             <p className="text-slate-600 mb-6 text-lg leading-relaxed">
-              Podólogo Clínico con amplia experiencia en el tratamiento de afecciones del pie. Mi enfoque se centra en brindar una atención empática, profesional y segura, entendiendo que cada paciente requiere un trato personalizado, especialmente en la comodidad de su hogar.
+              <strong className="text-primary">TENS titulado en Santo Tomás</strong> y <strong className="text-primary">Podólogo Clínico formado en Universidad Diego Portales</strong>. Con amplia experiencia en el tratamiento de afecciones del pie, mi enfoque se centra en brindar una atención empática, profesional y segura, entendiendo que cada paciente requiere un trato personalizado, especialmente en la comodidad de su hogar.
             </p>
 
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <GraduationCap size={20} className="text-secondary mt-1 shrink-0" />
                 <div>
-                  <h4 className="font-bold text-slate-900">Titulado en Podología Clínica</h4>
-                  <p className="text-sm text-slate-500">Instituto Profesional AIEP</p>
+                  <h4 className="font-bold text-slate-900">Técnico en Enfermería de Nivel Superior (TENS)</h4>
+                  <p className="text-sm text-slate-500">Titulado en Instituto Profesional Santo Tomás</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <GraduationCap size={20} className="text-secondary mt-1 shrink-0" />
+                <div>
+                  <h4 className="font-bold text-slate-900">Podólogo Clínico</h4>
+                  <p className="text-sm text-slate-500">Formado en Universidad Diego Portales</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">

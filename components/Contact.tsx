@@ -4,12 +4,42 @@ import SectionWrapper from './SectionWrapper';
 
 const Contact: React.FC = () => {
   const whatsappLink = "https://wa.me/56928247344";
-  const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', topic: 'Evaluación Podológica', message: '' });
+  const [formErrors, setFormErrors] = useState({ name: '' });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = `Hola, soy ${formData.name}. Mi teléfono es ${formData.phone}. ${formData.message}`;
-    window.open(`https://wa.me/56928247344?text=${encodeURIComponent(text)}`, '_blank');
+
+    // Validación
+    const errors = { name: '' };
+    let hasError = false;
+
+    if (!formData.name.trim()) {
+      errors.name = 'El nombre es obligatorio.';
+      hasError = true;
+    }
+
+    setFormErrors(errors);
+    if (hasError) return;
+
+    // Construir mensaje estructurado
+    const lines = [
+      `Hola, le escribo desde la página web de Podomed Clinical.`,
+      ``,
+      `*Nombre:* ${formData.name.trim()}`,
+      `*Motivo:* ${formData.topic}`,
+      ``,
+      formData.message.trim() ? `*Mensaje:* ${formData.message.trim()}` : `Me gustaría agendar una cita.`,
+      ``,
+      `Quedo atento/a a su respuesta. ¡Gracias!`
+    ];
+    const text = lines.join('\n');
+    const url = `https://wa.me/56928247344?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+
+    // Reset form
+    setFormData({ name: '', topic: 'Evaluación Podológica', message: '' });
+    setFormErrors({ name: '' });
   };
 
   return (
@@ -90,12 +120,15 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-2 gap-3">
-                {['Concepción', 'San Pedro de la Paz', 'Chiguayante', 'Talcahuano'].map((zona) => (
+                {['Concepción', 'Chiguayante', 'Penco', 'Lirquén', 'Talcahuano', 'San Pedro de la Paz'].map((zona) => (
                   <div key={zona} className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 text-center hover:bg-white/20 transition-colors">
                     <span className="font-semibold">{zona}</span>
                   </div>
                 ))}
               </div>
+              <p className="text-white/70 text-sm text-center mt-4 italic">
+                Y demás comunas del Gran Concepción
+              </p>
             </div>
 
             {/* Quick Form → WhatsApp */}
@@ -103,27 +136,34 @@ const Contact: React.FC = () => {
               <h3 className="text-xl font-bold text-slate-900 mb-4">Escríbanos directamente</h3>
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1" htmlFor="name">Nombre</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-1" htmlFor="name">Nombre <span className="text-red-400">*</span></label>
                   <input
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                    className={`w-full px-4 py-3 rounded-xl border ${formErrors.name ? 'border-red-400' : 'border-slate-200'} focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all`}
                     id="name"
-                    placeholder="Su nombre"
+                    placeholder="Su nombre completo"
                     type="text"
                     required
                     value={formData.name}
-                    onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                    onChange={(e) => { setFormData(prev => ({ ...prev, name: e.target.value })); setFormErrors(prev => ({ ...prev, name: '' })); }}
                   />
+                  {formErrors.name && <span className="text-red-400 text-xs mt-1 block">{formErrors.name}</span>}
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1" htmlFor="phone">Teléfono</label>
-                  <input
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    id="phone"
-                    placeholder="+56 9 ..."
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                  />
+                  <label className="block text-sm font-medium text-slate-700 mb-1" htmlFor="topic">Motivo de Consulta</label>
+                  <select
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white cursor-pointer"
+                    id="topic"
+                    value={formData.topic}
+                    onChange={(e) => setFormData(prev => ({ ...prev, topic: e.target.value }))}
+                  >
+                    <option>Evaluación Podológica</option>
+                    <option>Uñas Encarnadas</option>
+                    <option>Tratamiento de Micosis</option>
+                    <option>Podología Preventiva</option>
+                    <option>Atención Domiciliaria</option>
+                    <option>Pie Diabético</option>
+                    <option>Otro</option>
+                  </select>
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1" htmlFor="message">Mensaje</label>

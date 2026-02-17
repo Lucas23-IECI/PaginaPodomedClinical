@@ -3,7 +3,7 @@ import { GraduationCap, BadgeCheck, Heart, Quote } from 'lucide-react';
 import SectionWrapper from './SectionWrapper';
 
 /** Ruta de la foto del profesional desde Public/Fotos/ */
-const FOTO_ESPECIALISTA = "/Fotos/FotoCliente1.jpg";
+const FOTO_ESPECIALISTA = "/Fotos/FotoPerfil.png";
 
 const About: React.FC = () => {
   return (

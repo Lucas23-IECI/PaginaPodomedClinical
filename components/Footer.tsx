@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { Footprints, Facebook, Instagram, MessageCircle, Heart, X, Shield, FileText } from 'lucide-react';
+import { Facebook, Instagram, MessageCircle, Heart, X, Shield, FileText } from 'lucide-react';
+
+/** Logo del footer — asset local desde Public/Fotos/ */
+const LOGO_FOOTER = "/Fotos/LogoSvgOficial.png";
 
 const Footer: React.FC = () => {
   const [modalContent, setModalContent] = useState<'privacy' | 'terms' | null>(null);
@@ -17,9 +20,12 @@ const Footer: React.FC = () => {
             {/* Brand */}
             <div className="lg:col-span-5 space-y-6">
               <div className="flex items-center gap-3">
-                <div className="text-white flex items-center justify-center p-2.5 bg-white/10 rounded-full border border-white/10">
-                  <Footprints size={28} />
-                </div>
+                <img
+                  src={LOGO_FOOTER}
+                  alt="Podomed Clinical — Logo"
+                  className="h-11 w-auto object-contain brightness-0 invert"
+                  loading="lazy"
+                />
                 <div>
                   <h2 className="text-2xl font-bold leading-none tracking-tight">Podomed Clinical</h2>
                   <span className="text-secondary text-xs font-bold tracking-[0.2em] uppercase">Podología a Domicilio</span>

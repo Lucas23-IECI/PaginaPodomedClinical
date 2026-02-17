@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
               Atención Podológica Profesional en <span className="text-secondary">Concepción</span>
             </h1>
 
-            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0 mt-[1px]">
               Servicio clínico a domicilio de alta calidad para el cuidado integral de sus pies. Llevamos la clínica a la comodidad de su hogar con los más altos estándares de higiene.
             </p>
 
@@ -83,13 +83,12 @@ const Hero: React.FC = () => {
           <SectionWrapper delay={0.2} className="relative lg:h-[600px] w-full flex items-center justify-center">
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-100/50 to-green-100/50 rounded-[2rem] -rotate-3 scale-95 z-0"></div>
             <div className="relative z-10 w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-slate-200 aspect-[4/3] lg:aspect-auto group">
-              {/* PENDIENTE: Reemplazar con foto real del profesional desde Public/Fotos/ */}
               <img
                 alt="Gonzalo Acevedo — Podólogo Clínico atendiendo paciente a domicilio"
-                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                loading="lazy"
+                className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
+                loading="eager"
                 decoding="async"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCohQAGyoxe5Qj0uQ2yDxchtxtwOT3x13zux7vyVxEdhDslHK6yxRzcwG-vN_dp3z0H-a48OMjSE6CWWc8pXZSPb8IjtbXIII5XDh0ZS7hnRUGLRmV807qb73niWdlDS2PnhOqjWgldTOyNfxxelCqT1rMfUAF-s-6KRFUX6tCYDxwxYBK5qCZQWJp_aDhBozeqesskOnJ65OF2_LppJ_4V9SnVHi4qwn7_WJCH6vl8uFXOic_KTsyRyJrt9xyP26cRcC5DqrroPLsB"
+                src="/Fotos/FotoCliente2.jpg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
             </div>

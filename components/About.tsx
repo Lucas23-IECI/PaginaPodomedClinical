@@ -1,6 +1,9 @@
 import React from 'react';
-import { GraduationCap, BadgeCheck, Heart } from 'lucide-react';
+import { GraduationCap, BadgeCheck, Heart, Quote } from 'lucide-react';
 import SectionWrapper from './SectionWrapper';
+
+/** Ruta de la foto del profesional desde Public/Fotos/ */
+const FOTO_ESPECIALISTA = "/Fotos/FotoCliente1.jpg";
 
 const About: React.FC = () => {
   return (
@@ -11,13 +14,12 @@ const About: React.FC = () => {
           <SectionWrapper className="relative w-full max-w-md lg:w-1/2">
             <div className="absolute inset-0 bg-primary/10 rounded-full translate-x-4 translate-y-4"></div>
             <div className="relative rounded-full overflow-hidden aspect-square border-8 border-white shadow-2xl group">
-              {/* PENDIENTE: Reemplazar con foto real del profesional desde Public/Fotos/ */}
               <img
                 alt="Gonzalo Andrés Acevedo Salvo — Podólogo Clínico"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
                 decoding="async"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUuzEaGixjQGzAFBekFEPgvgz7ec8zN34byZ2gYLKrbjW8jEEcU9E_wVjy1QwIjfwtaaB2sXtfEttiwUTdpssAptKSBElW_WiChBJaYeEOtzU67Z1lG7ix52da40bmhDiM6QYp5AIH2eFwzvZ4-cunii2FmJ27vdZdxThewghuLNKCClU39--M-2VFpyjq4PPD91tTcy1hAsAlTMH72jQNJWj0FVGuoh0KZGirvs1wZvSNhh-JLEwY57vjLICD3UhAlfYl1LP5p8Pk"
+                src={FOTO_ESPECIALISTA}
               />
             </div>
           </SectionWrapper>
@@ -53,6 +55,14 @@ const About: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            {/* Frase destacada del profesional */}
+            <blockquote className="mt-8 relative bg-primary/5 border-l-4 border-primary rounded-r-xl px-6 py-5">
+              <Quote size={20} className="text-primary/30 absolute top-3 right-4" />
+              <p className="text-primary font-semibold text-lg italic leading-relaxed">
+                "El cuidado de los pies es el primer paso hacia el éxito"
+              </p>
+            </blockquote>
 
             {/* Stats */}
             <div className="mt-8 pt-8 border-t border-slate-200 flex flex-wrap gap-8 justify-center lg:justify-start">

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Footprints, Calendar, ArrowRight } from 'lucide-react';
+import { Menu, X, Calendar, ArrowRight } from 'lucide-react';
 import { NavItem } from '../types';
+
+/** Logo del navbar — asset local desde Public/Fotos/ */
+const LOGO_NAV = "/Fotos/LogoSvgOficial.png";
 
 const navItems: NavItem[] = [
   { label: 'Inicio', href: '#inicio' },
@@ -68,9 +71,12 @@ const Navbar: React.FC = () => {
               className="flex items-center gap-2 md:gap-3 group z-50 relative shrink-0"
               onClick={(e) => handleNavClick(e, '#')}
             >
-              <div className="text-primary bg-primary/10 p-2 md:p-2.5 rounded-full group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                <Footprints size={24} className="md:w-7 md:h-7" />
-              </div>
+              <img
+                src={LOGO_NAV}
+                alt="Podomed Clinical — Logo"
+                className="h-10 md:h-12 w-auto object-contain"
+                loading="eager"
+              />
               <div className="flex flex-col">
                 <h2 className="text-primary text-lg md:text-xl lg:text-2xl font-extrabold leading-none tracking-tight group-hover:text-primary-dark transition-colors duration-300">
                   Podomed Clinical

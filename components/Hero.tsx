@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, ArrowRight, ShieldCheck, Home, Sparkles } from 'lucide-react';
+import { MessageCircle, ArrowRight, ShieldCheck, Home, Sparkles, Stethoscope } from 'lucide-react';
 import SectionWrapper from './SectionWrapper';
 
 const WHATSAPP_LINK = "https://wa.me/56928247344";
@@ -68,6 +68,11 @@ const Hero: React.FC = () => {
 
             {/* Trust Badges */}
             <div className="pt-8 flex flex-wrap gap-6 justify-center lg:justify-start">
+              <div className="flex items-center gap-1.5 text-sm font-semibold text-slate-500 group cursor-help" title="Técnico en Enfermería de Nivel Superior y Podólogo Clínico">
+                <Stethoscope size={18} className="text-secondary group-hover:scale-110 transition-transform" />
+                TENS y Podólogo
+              </div>
+              <div className="hidden sm:block w-1.5 h-1.5 rounded-full bg-secondary/30"></div>
               <div className="flex items-center gap-1.5 text-sm font-semibold text-slate-500 group cursor-help" title="Profesional certificado en la Superintendencia de Salud">
                 <ShieldCheck size={18} className="text-secondary group-hover:scale-110 transition-transform" />
                 Certificado
@@ -90,7 +95,7 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-100/50 to-green-100/50 rounded-[2rem] -rotate-3 scale-95 z-0"></div>
             <div className="relative z-10 w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-slate-200 aspect-[4/3] lg:aspect-auto group">
               <img
-                alt="Gonzalo Acevedo — Podólogo Clínico atendiendo paciente a domicilio"
+                alt="Gonzalo Acevedo — TENS y Podólogo Clínico atendiendo paciente a domicilio"
                 className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
                 loading="eager"
                 decoding="async"

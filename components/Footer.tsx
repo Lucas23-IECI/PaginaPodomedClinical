@@ -101,7 +101,7 @@ const Footer: React.FC = () => {
                   <span>Horarios a convenir</span>
                 </li>
               </ul>
-              <p className="text-xs text-gray-500 italic">Profesional: Gonzalo Andrés Acevedo Salvo</p>
+              <p className="text-xs text-gray-500 italic">TENS y Podólogo Clínico: Gonzalo Andrés Acevedo Salvo</p>
             </div>
           </div>
 

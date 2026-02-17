@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, BadgeCheck, Heart, Quote } from 'lucide-react';
+import { GraduationCap, BadgeCheck, Heart, Quote, Stethoscope } from 'lucide-react';
 import SectionWrapper from './SectionWrapper';
 
 /** Ruta de la foto del profesional desde Public/Fotos/ */
@@ -15,7 +15,7 @@ const About: React.FC = () => {
             <div className="absolute inset-0 bg-primary/10 rounded-full translate-x-4 translate-y-4"></div>
             <div className="relative rounded-full overflow-hidden aspect-square border-8 border-white shadow-2xl group">
               <img
-                alt="Gonzalo Andrés Acevedo Salvo — Podólogo Clínico"
+                alt="Gonzalo Andrés Acevedo Salvo — Técnico en Enfermería y Podólogo Clínico"
                 className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
                 decoding="async"
@@ -27,7 +27,8 @@ const About: React.FC = () => {
           <SectionWrapper delay={0.2} className="w-full lg:w-1/2">
             <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Sobre el Profesional</span>
             <h2 className="text-primary text-3xl font-extrabold tracking-tight mb-2">Conozca a su Especialista</h2>
-            <h3 className="text-xl font-bold text-slate-700 mb-6">Gonzalo Andrés Acevedo Salvo</h3>
+            <h3 className="text-xl font-bold text-slate-700 mb-1">Gonzalo Andrés Acevedo Salvo</h3>
+            <p className="text-secondary font-bold text-base mb-6">Técnico en Enfermería y Podólogo Clínico</p>
             <p className="text-slate-600 mb-6 text-lg leading-relaxed">
               <strong className="text-primary">TENS titulado en Santo Tomás</strong> y <strong className="text-primary">Podólogo Clínico formado en Universidad Diego Portales</strong>. Con amplia experiencia en el tratamiento de afecciones del pie, mi enfoque se centra en brindar una atención empática, profesional y segura, entendiendo que cada paciente requiere un trato personalizado, especialmente en la comodidad de su hogar.
             </p>
@@ -59,6 +60,30 @@ const About: React.FC = () => {
                 <div>
                   <h4 className="font-bold text-slate-900">Atención Humanizada</h4>
                   <p className="text-sm text-slate-500">Especialista en trato con adulto mayor y pie diabético.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Banner Doble Formación */}
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-primary/5 border border-primary/15 rounded-2xl p-5 flex items-start gap-4 hover:shadow-md transition-shadow">
+                <div className="bg-primary/10 p-2.5 rounded-xl shrink-0">
+                  <Stethoscope size={24} className="text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-primary text-sm uppercase tracking-wide">TENS</h4>
+                  <p className="text-slate-600 text-sm mt-0.5">Técnico en Enfermería de Nivel Superior</p>
+                  <p className="text-slate-400 text-xs mt-1">Instituto Profesional Santo Tomás</p>
+                </div>
+              </div>
+              <div className="bg-primary/5 border border-primary/15 rounded-2xl p-5 flex items-start gap-4 hover:shadow-md transition-shadow">
+                <div className="bg-primary/10 p-2.5 rounded-xl shrink-0">
+                  <GraduationCap size={24} className="text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-primary text-sm uppercase tracking-wide">Podólogo Clínico</h4>
+                  <p className="text-slate-600 text-sm mt-0.5">Especialización en Podología Clínica</p>
+                  <p className="text-slate-400 text-xs mt-1">Universidad Diego Portales</p>
                 </div>
               </div>
             </div>

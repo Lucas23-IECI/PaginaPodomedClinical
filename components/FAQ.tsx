@@ -18,8 +18,8 @@ const faqs: FaqItem[] = [
     answer: "Solo necesitamos un espacio cómodo con buena iluminación donde el paciente pueda sentarse (un sillón o silla) y una toma de corriente cercana. Nosotros llevamos todo el instrumental, insumos y equipos necesarios."
   },
   {
-    question: "¿Emiten boleta para reembolso?",
-    answer: "Sí, entregamos boleta de honorarios electrónica por la prestación del servicio podológico."
+    question: "¿Qué medios de pago aceptan?",
+    answer: "Aceptamos pago en efectivo y transferencia bancaria. Al finalizar la atención le indicaremos los datos para realizar el pago de forma cómoda y segura."
   },
   {
     question: "¿Cómo agendo una hora?",

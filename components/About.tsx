@@ -30,7 +30,7 @@ const About: React.FC = () => {
             <h3 className="text-xl font-bold text-slate-700 mb-1">Gonzalo Andrés Acevedo Salvo</h3>
             <p className="text-secondary font-bold text-base mb-6">Técnico en Enfermería y Podólogo Clínico</p>
             <p className="text-slate-600 mb-6 text-lg leading-relaxed">
-              <strong className="text-primary">TENS titulado en Santo Tomás</strong> y <strong className="text-primary">Podólogo Clínico formado en Universidad Diego Portales</strong>. Con amplia experiencia en el tratamiento de afecciones del pie, mi enfoque se centra en brindar una atención empática, profesional y segura, entendiendo que cada paciente requiere un trato personalizado, especialmente en la comodidad de su hogar.
+              <strong className="text-primary">TENS titulado en Santo Tomás</strong> y <strong className="text-primary">Podólogo Clínico formado en Instituto Profesional Diego Portales</strong>. Con amplia experiencia en el tratamiento de afecciones del pie, mi enfoque se centra en brindar una atención empática, profesional y segura, entendiendo que cada paciente requiere un trato personalizado, especialmente en la comodidad de su hogar.
             </p>
 
             <div className="space-y-3">
@@ -45,7 +45,7 @@ const About: React.FC = () => {
                 <GraduationCap size={20} className="text-secondary mt-1 shrink-0" />
                 <div>
                   <h4 className="font-bold text-slate-900">Podólogo Clínico</h4>
-                  <p className="text-sm text-slate-500">Formado en Universidad Diego Portales</p>
+                  <p className="text-sm text-slate-500">Formado en Instituto Profesional Diego Portales</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -83,7 +83,7 @@ const About: React.FC = () => {
                 <div>
                   <h4 className="font-bold text-primary text-sm uppercase tracking-wide">Podólogo Clínico</h4>
                   <p className="text-slate-600 text-sm mt-0.5">Especialización en Podología Clínica</p>
-                  <p className="text-slate-400 text-xs mt-1">Universidad Diego Portales</p>
+                  <p className="text-slate-400 text-xs mt-1">Instituto Profesional Diego Portales</p>
                 </div>
               </div>
             </div>
